@@ -1,0 +1,46 @@
+//API to check valid user or not//
+POST http://localhost:/3001/login/
+Content-Type: application/json 
+
+
+{
+    "username":"roja_gumpula",
+    "password":"roja_111"
+}
+
+//jwt token has not generated raised an error that's why i'm not adding it to all API'S//
+
+###
+
+//API for adding a new transaction//
+POST http://localhost:/3001/transactions/ 
+Content-Type: application/json
+
+
+{ 
+    id:3,
+    "type":"expense",
+    "category":"shopping",
+    "amount":9000.00,
+    "date":"2024-10-5",
+    "description":"friend wedding shopping"
+
+}
+###
+GET http://localhost:/3001/transactions/2/
+
+###
+PUT http://localhost:/3001/transactions/1/
+Content-Type: application/json 
+
+{ 
+    "type":"expense",
+    "category":"shopping",
+    "amount":9000.00,
+    "date":"2024-10-5",
+    "description":"friend wedding shopping"
+
+}
+###
+
+DELETE http://localhost:3001/transactions/3/ 
